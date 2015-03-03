@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #ffffff;
+	color: #ABB868;
+	font-family: 'Cabin', sans-serif;
+}
+
+.qr {
+    float:left;   
+    position: relative;
+    width: 30%;
+}
+
+.desc {
+    float:left;
+    width: 70%;
+}
+
+.card {
+	width: 100%;
+	position: relative;
+	border-top: 30px solid black;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	width: 50%;
+	
+}
+@media print {
+
+	
+.qr {
+    float:left;   
+    position: relative;
+    width: 30%;
+}
+
+.desc {
+    float:left;
+    width: 70%;
+}
+
+.card {
+	width: 100%;
+	position: relative;
+	border-top: 30px solid black;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	width: 50%;
+	
+}	
+	
+	
+	
+}

@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #ABB868;
+	color: #ABB868;
+	font-family: 'Cabin', sans-serif;
+}
+
+.printBody {
+	background-color: #ffffff;
+	color: #ABB868;
+	font-family: 'Cabin', sans-serif;
+}
+
+.initialInput {
+	background-color: white;
+	margin: 40px auto;
+	width:75%;
+	border: 10px solid #6C804B;
+	padding: 20px;
+}
+
+.initialForm {
+	margin: auto;
+	
+}
+
+.bigTitle {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 4em;
+	color: #ABB868;
+	text-align: center;
+	margin: auto;
+	padding: 15px;
+}
+
+#title {
+	margin-top: -40px;
+}
+
+.quickAdd {
+	font-size: 4em;
+	background-color: #E8E0A1;
+	border: 3px solid #ABB868;
+	width: 100%;
+	padding-left: 10px;
+	margin: 20px auto 40px -6px;
+	font-family: 'Cabin Sketch', cursive;	
+}
+
+input:focus {outline: none; }
+textarea:focus {outline: none; }
+
+.formDiv {
+	width:80%;
+	margin: auto;
+}
+
+button {
+	color: #E5F7D1;
+	font-family: 'Cabin Sketch', cursive;
+	background: #ABB868;
+	border: 0px solid black;
+	font-size: 3em;
+	cursor: pointer;
+	width: 100%;
+	margin: 5px auto 20px;
+	border-radius: 5px;
+	outline:0;
+}
+
+#qrcode {
+	text-align: center;	
+}
+
+.qrImage {
+	margin: 6px auto 30px; 
+}
+
+#begin, #optionsButton {
+	width: 50%;
+}
+
+.halfButton {
+	margin: auto;
+	text-align: center;
+}
+
+.pageHolder {
+	background-color: white;
+	margin: auto; 
+	width:17cm;
+	border: 10px solid #6C804B;
+	padding: 1cm;
+}
+
+@media print {
+    .pageHolder {
+        background-color: white;
+        border: 0px solid #6C804B;
+		margin: auto; 
+		width:17cm;
+		padding: 0cm;
+    }
+    #title {
+	margin-top: -20px;
+	}
+	body {
+	background-color: #ffffff;
+	color: #ABB868;
+	font-family: 'Cabin', sans-serif;
+	}
+	
+	
+}
+
+.option {
+	margin: auto;
+	display:inline-block;
+	width: 49%;
+	text-align:center;
+	font-family: 'Cabin', sans-serif;
+	color:black;
+}
+
+.optionText {
+	font-size: large;
+	color: black;
+	font-family: 'Cabin', sans-serif;
+	background: white;
+	cursor: pointer;
+	width: 100%;
+	margin: auto;
+	padding: 10px 10px 10px;
+	border-radius: 5px;
+}
+
+.optionText:hover {
+    background-color: #ABB868;
+}
+
+.templateHolder {
+	padding: 0px 20px 20px;
+	border-radius: 5px;
+	margin: 20px;
+}
+
+.smallTemplate {
+	height: 6em;
+	background-color: #D7D19D;
+	border-radius: 0.5em;
+	margin: 1em auto;	
+}
+
+.scissors {
+	border-top:2px dashed black;
+	margin: auto;
+}
+
+.scisIcon {
+	position: absolute;
+	margin-top: -8px;
+	margin-left: -20px;
+	height: 7px;
+	width: 15px;
+}
+.printContainer {
+	color: black;
+}
+
+.printPage{
+	height: 27cm;
+	position: relative;
+}
+
+.preview {
+	font-size: 2em;
+	margin: auto;
+	-ms-word-break: break-all;
+	/* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    width: 60%;
+}
+
+.previewMany {
+	font-size: 2em;
+	-ms-word-break: break-all;
+	/* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+
+.urlTitle{
+	color: #6C804B;
+}
+
+.labelForm {
+	font-size: 1.5em;
+}
+
+.orgText {
+	font-size: 2em;
+	background-color: #E8E0A1;
+	border: 3px solid #ABB868;
+	width: 95%;
+	padding-left: 10px;
+	margin: auto;
+	font-family: 'Cabin Sketch', cursive;	
+}
+
+.commentText {
+	font-size: 2em;
+	background-color: #E8E0A1;
+	border: 3px solid #ABB868;
+	width: 95%;
+	padding-left: 10px;
+	margin: auto;
+	font-family: 'Cabin Sketch', cursive;	
+}
+
+.qr {
+    float:left;   
+    position: relative;
+    width: 28%;
+    margin: 7px;
+}
+
+.desc {
+    float:left;
+    width: 65%;
+}
+
+.card {
+	width: 100%;
+	height: 225px;
+	position: relative;
+	color: black;
+	border-top: 35px solid #ABB868;
+	border-bottom: 2px solid #ABB868;
+	border-left: 2px solid #ABB868;
+	border-right:2px solid #ABB868;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	padding: 5px;
+	margin: 30px auto 55px;
+}
+.researchPass{
+	position:absolute;
+	margin: -32px 0px 0px 475px;
+	color: white;
+	font-family: 'Cabin Sketch', cursive;
+	font-style: italic;
+	font-size: 22px;
+}
+
+.urlFooter {
+	position: absolute;
+	margin: 195px 0px 200px -570px;
+		-ms-word-break: break-all;
+	/* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+    width: 400px;
+    font-size: x-small;
+}
+
+.favicon {
+	position: absolute;
+	margin: 195px 0px 200px -600px;
+}
+
+.encryption {
+	position: absolute;
+	margin: 195px 0 200px -123px;
+		-ms-word-break: break-all;
+	/* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+    width: 300px;
+    font-size: x-small;
+}
+
+.padIcon {
+	position: absolute;
+	margin: 195px 0 200px -153px;
+}
+
+.descTitle {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: x-large;
+	margin: 10px;
+}
+
+.descHosted {
+	margin: -10px 10px 10px; 
+	font-size: small;
+	font-style: italic;
+    border-bottom: 1px solid #ABB868;
+    padding-bottom: 12px;
+}
+
+
+.descComment {
+	margin: 5px 10px 10px;
+}
+	
