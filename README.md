@@ -1,7 +1,7 @@
 # QR Research Pass
 A simple QR code generator aimed at teachers 
 
-##Quick qr code 
+##Quick qr image 
 Users write or paste a url into an input to quickly make a QR code which can be downloaded and used elsewhere. 
 
 ##Research pass
