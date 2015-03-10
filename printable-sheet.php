@@ -18,28 +18,51 @@
 <body>
 	<div class = "pageHolder">
 		<div class = "page">
-    		<div class = 'printPage'>
+    		<div class = 'printPage' id = "urlData">
 	
-			<form method="POST" action="process-many.php">
-			<p class = "labelForm">Research theme or page title:</p>
-			<textarea rows="1" name="theme" class="commentText"></textarea><br />
-			<p class = "labelForm">First site:</p>
-			<textarea rows="1" name="hostText" class="commentText"><?php echo $_GET["url"]; ?></textarea><br />
-			<p class = "labelForm">Who made this site?</p>
-			<input type="text" name="orgText" class="orgText" placeholder='Enter website owner/organisation'><br />
-			<p class = "labelForm">Other information</p>
-			<textarea rows="7" name="commentText" class="commentText" placeholder='Enter teacher comment'></textarea><br />
-			<input type="hidden" name="url" value="<?php echo $_GET["url"] ?>" />
-			<input type="hidden" name="host" value="<?php echo parse_url($_GET["url"], PHP_URL_HOST) ?>" /><br />
-			<div class="halfButton"><button id = "begin" name="submit" type="submit" value="printable">Ok, go!</button></div>
+			<form method="POST" id="manyUrls" action="process-many.php">
+			<p class = "bigTitle">Printable research page</p>
+            <p class = "labelForm">Research theme or page title:</p>
+			<textarea rows="1" name="theme" class="commentText"></textarea><br /><br />
+			<p class = "labelForm">Site one:</p>
+			<textarea rows="1" name="siteOne" class="commentText"><?php echo $_GET["url"]; ?></textarea>
+            <p class = "labelForm">Site two:</p>
+			<textarea rows="1" name="siteTwo" class="commentText" placeholder='Enter address'></textarea>
+            <p class = "labelForm">Site three:</p>
+			<textarea rows="1" name="siteThree" class="commentText" placeholder='Enter address'></textarea>	<br />		
+			<div class="halfButton"><button id = "begin" name="submit" type="submit" value="printable">Next</button></div>
 			</form>			
-            
-            
-           
-           
+                                      
            
         	</div>
 		</div>
 	</div>
 </body>
 </html>
+
+<script>
+//Wait till HTML has fully loaded
+$(document).ready(function(){
+    // Attach a submit handler to the form
+	$( "#manyUrls" ).submit(function( event ) {
+		
+  		// Stop form from submitting normally
+  		event.preventDefault();
+ 
+  		// Get some values from elements on the page:
+  		var url = $(this).attr("action");
+    	var fData = $(this).serialize();
+ 
+  		// Send the data using post
+  		var posting = $.post(url, fData, function(response) { 
+ 
+  			// Put the results in a div
+    		$( "#urlData" ).empty().append( response );
+            
+  		});//End $.post
+    
+    });	//End form submit event.
+
+	
+})//End Ready	
+</script>
