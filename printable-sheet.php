@@ -25,11 +25,11 @@
             <p class = "labelForm">Research theme or page title:</p>
 			<textarea rows="1" name="theme" class="commentText"></textarea><br /><br />
 			<p class = "labelForm">Site one:</p>
-			<textarea rows="1" name="siteOne" class="commentText"><?php echo $_GET["url"]; ?></textarea>
+			<textarea rows="1" name="siteOne" class="commentText"><?php echo $_POST["link"]; ?></textarea>
             <p class = "labelForm">Site two:</p>
 			<textarea rows="1" name="siteTwo" class="commentText" placeholder='Enter address'></textarea>
             <p class = "labelForm">Site three:</p>
-			<textarea rows="1" name="siteThree" class="commentText" placeholder='Enter address'></textarea>	<br />		
+			<textarea rows="1" name="siteThree" class="commentText" placeholder='Enter address'></textarea>	<br /><br />		
 			<div class="halfButton"><button id = "begin" name="submit" type="submit" value="printable">Next</button></div>
 			</form>			
                                       

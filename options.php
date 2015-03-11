@@ -34,7 +34,8 @@
 			
 			<div class = "option">
 				<div class = "templateHolder">
-					<form method="POST" action="printable-sheet.php?url=<?php echo $link ?>">
+					<form method="POST" action="printable-sheet.php">
+                    <input type="hidden" name="link" value="<?php echo $link; ?>" />
 					<button class = "optionText" name="submit" type="submit" value="printable"><?php echo $difLink; ?></button>
 					</form>
 					<div class = "smallTemplate"></div>

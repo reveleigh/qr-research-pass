@@ -169,9 +169,10 @@ button {
 }
 
 .printPage{
-	height: 27cm;
+	min-height: 27cm;
 	position: relative;
 }
+
 
 .preview {
 	font-size: 2em;
@@ -200,6 +201,7 @@ button {
 .labelForm {
 	font-size: 1.5em;
 	color:#000;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 .orgText {

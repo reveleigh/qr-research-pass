@@ -10,14 +10,18 @@ $siteOne = $_POST["siteOne"];
 $siteTwo = $_POST["siteTwo"];
 $siteThree = $_POST["siteThree"];
 
-
-	echo "<p class = 'bigTitle' id = 'title'>Tell us more about the sites you have selected.</p>";
+echo "<div id = 'threeDetail'>";
+echo "<p class = 'bigTitle' id = 'title'>Tell us more about the sites you have selected</p>";
+echo $theme;
 ?>
 		
-		<form method="POST" action="index.php?set=true">
-        
-        
-		<p class = "labelForm">Site one: <?php echo $siteOne ?></p>
+		<form method="POST" action="research-pass-many.php" id = "threeSites">
+        <input type="hidden" name="theme" value="<?php echo $theme; ?>" />
+        <input type="hidden" name="siteOne" value="<?php echo $siteOne; ?>" />
+        <input type="hidden" name="siteTwo" value="<?php echo $siteTwo; ?>" />
+        <input type="hidden" name="siteThree" value="<?php echo $siteThree; ?>" />
+     
+		<p class = "labelForm"><b>Site one:</b> <?php echo $siteOne ?></p>
         <p class = "labelForm">Title:</p>
 		<textarea rows="1" name="titleOne" class="commentText"><?php echo getTitle($siteOne); ?></textarea><br />
 		<p class = "labelForm">Hosting site:</p>
@@ -26,11 +30,11 @@ $siteThree = $_POST["siteThree"];
 		<input type="text" name="orgTextOne" class="orgText" placeholder='Enter website owner/organisation'><br />
 		<p class = "labelForm">Other information</p>
 		<textarea rows="7" name="commentTextOne" class="commentText" placeholder='Enter teacher comment'></textarea><br />
-		<br />
+		<br /><br />
 
         
         
-        <p class = "labelForm">Site two: <?php echo $siteTwo ?></p>
+        <p class = "labelForm"><b>Site two:</b> <?php echo $siteTwo ?></p>
         <p class = "labelForm">Title:</p>
 		<textarea rows="1" name="titleTextTwo" class="commentText"><?php echo getTitle($siteTwo); ?></textarea><br />
 		<p class = "labelForm">Hosting site:</p>
@@ -39,12 +43,12 @@ $siteThree = $_POST["siteThree"];
 		<input type="text" name="orgTextTwo" class="orgText" placeholder='Enter website owner/organisation'><br />
 		<p class = "labelForm">Other information</p>
 		<textarea rows="7" name="commentTextTwo" class="commentText" placeholder='Enter teacher comment'></textarea><br />
-		<br />
+		<br /><br />
 
         
         
         
-        <p class = "labelForm">Site three: <?php echo $siteThree ?></p>
+        <p class = "labelForm"><b>Site three:</b> <?php echo $siteThree ?></p>
         <p class = "labelForm">Title:</p>
 		<textarea rows="1" name="titleTextThree" class="commentText"><?php echo getTitle($siteThree); ?></textarea><br />
 		<p class = "labelForm">Hosting site:</p>
@@ -63,3 +67,30 @@ $siteThree = $_POST["siteThree"];
 		</form>
 
 	</div>
+
+<script>
+//Wait till HTML has fully loaded
+$(document).ready(function(){
+    // Attach a submit handler to the form
+	$( "#threeSites" ).submit(function( event ) {
+		
+  		// Stop form from submitting normally
+  		event.preventDefault();
+ 
+  		// Get some values from elements on the page:
+  		var url = $(this).attr("action");
+    	var fData = $(this).serialize();
+ 
+  		// Send the data using post
+  		var posting = $.post(url, fData, function(response) { 
+ 
+  			// Put the results in a div
+    		$( "#threeDetail" ).empty().append( response );
+            
+  		});//End $.post
+    
+    });	//End form submit event.
+
+	
+})//End Ready	
+</script>
