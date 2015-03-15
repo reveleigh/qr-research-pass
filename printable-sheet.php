@@ -10,7 +10,6 @@
 	<title>QR Research Pass</title>
     <?php
 	include_once("getitle.php");
-	include_once("classes.php");
 	?>
 	
 </head>
