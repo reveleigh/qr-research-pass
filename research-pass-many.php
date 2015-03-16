@@ -3,10 +3,7 @@ $theme = $_POST["theme"];
 $accessedOn = getdate(); 
 $now = $accessedOn[mday] . "/" . $accessedOn[mon] . "/" . $accessedOn[year];
 
-echo "<p class = 'bigTitle' id = 'title'>" . $theme . "</p>";
-?>
-
-
+echo "<p class = 'bigTitle' id = 'title'>" . $theme . "</p>"; ?>
 
 	
 	<div class="card">
@@ -21,16 +18,7 @@ echo "<p class = 'bigTitle' id = 'title'>" . $theme . "</p>";
     		</div>
     		<div class = "descComment"><?php echo $_POST["commentTextOne"]; ?></div>
     	</div>
-		<img class = "favicon" src="<?php 
-		
-		$theURL = "http://" . $_POST["siteOne"] . "/favicon.ico";
-		
-		if (@getimagesize($theURL)) {
-			echo $theURL;
-		} else {
-			echo "globe.jpg";	
-		}
-		?>" width = 24px />
+		<img class = "favicon" src="<?php echo $_POST["favOne"]; ?>" width = 24px />
 		
 		<span class= "urlFooter">
 			
@@ -71,16 +59,7 @@ echo "<p class = 'bigTitle' id = 'title'>" . $theme . "</p>";
     		</div>
     		<div class = "descComment"><?php echo $_POST["commentTextTwo"]; ?></div>
     	</div>
-		<img class = "favicon" src="<?php 
-		
-		$theURL = "http://" . $_POST["siteTwo"] . "/favicon.ico";
-		
-		if (@getimagesize($theURL)) {
-			echo $theURL;
-		} else {
-			echo "globe.jpg";	
-		}
-		?>" width = 24px />
+		<img class = "favicon" src="<?php echo $_POST["favTwo"]; ?>" width = 24px />
 		
 		<span class= "urlFooter">
 			
@@ -120,16 +99,7 @@ echo "<p class = 'bigTitle' id = 'title'>" . $theme . "</p>";
     		</div>
     		<div class = "descComment"><?php echo $_POST["commentTextThree"]; ?></div>
     	</div>
-		<img class = "favicon" src="<?php 
-		
-		$theURL = "http://" . $_POST["siteThree"] . "/favicon.ico";
-		
-		if (@getimagesize($theURL)) {
-			echo $theURL;
-		} else {
-			echo "globe.jpg";	
-		}
-		?>" width = 24px />
+		<img class = "favicon" src="<?php echo $_POST["favThree"]; ?>" width = 24px />
 		
 		<span class= "urlFooter">
 			
@@ -182,7 +152,8 @@ echo "<p class = 'bigTitle' id = 'title'>" . $theme . "</p>";
 	
 	
 </script>
-    
+
+
     
     
     
