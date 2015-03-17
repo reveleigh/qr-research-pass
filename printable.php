@@ -6,6 +6,7 @@
 	echo "<div class = 'printPage'>";
 	$accessedOn = getdate(); 
 	$now = $accessedOn[mday] . "/" . $accessedOn[mon] . "/" . $accessedOn[year];
+	$favIcon = getFavicon(parse_url(deRidHash($_POST["url"]), PHP_URL_SCHEME) . "://" . $_POST["hostText"] . "/favicon.ico");
 ?>
 	
 	<div class="card">
@@ -20,14 +21,7 @@
     		</div>
     		<div class = "descComment"><?php echo $_POST["commentText"]; ?></div>
     	</div>
-		<img class = "favicon" src="<?php $theURL = "http://" . $_POST["hostText"] . "/favicon.ico";
-		
-		if (@getimagesize($theURL)) {
-			echo $theURL;
-		} else {
-			echo "globe.jpg";	
-		}
-		?>" width = 24px />
+		<img class = "favicon" src="<?php echo $favIcon; ?>" width = 24px />
 		
 		<span class= "urlFooter">
 			
@@ -63,14 +57,7 @@
     		</div>
     		<div class = "descComment"><?php echo $_POST["commentText"]; ?></div>
     	</div>
-		<img class = "favicon" src="<?php $theURL = "http://" . $_POST["hostText"] . "/favicon.ico";
-		
-		if (@getimagesize($theURL)) {
-			echo $theURL;
-		} else {
-			echo "globe.jpg";	
-		}
-		?>" width = 24px />
+		<img class = "favicon" src="<?php echo $favIcon; ?>" width = 24px />
 		
 		<span class= "urlFooter">
 			
@@ -106,18 +93,12 @@
     		</div>
     		<div class = "descComment"><?php echo $_POST["commentText"]; ?></div>
     	</div>
-		<img class = "favicon" src="<?php $theURL = "http://" . $_POST["hostText"] . "/favicon.ico";
-		
-		if (@getimagesize($theURL)) {
-			echo $theURL;
-		} else {
-			echo "globe.jpg";	
-		}
-		?>" width = 24px />
+		<img class = "favicon" src="<?php echo $favIcon; ?>" width = 24px />
 		
 		<span class= "urlFooter">
 			
 			<?php 
+			echo $theURL;
 			$fullURL = deRidHash($_POST["url"]);
 			if (strlen($fullURL) > 150) {
 				echo substr($fullURL, 0, 148) . " . . . [partial url]";
