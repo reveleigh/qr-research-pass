@@ -19,14 +19,14 @@ function getTitle($Url){
 
 function getFavicon($host) {
 	$file_headers = @get_headers($host);
-	if($file_headers[0] == 'HTTP/1.0 200 OK' or 'HTTP/1.1 200 OK') {
-	//Return favicon 
-    return $host;
+	if($file_headers[0] == 'HTTP/1.0 200 OK' OR $file_headers[0] == 'HTTP/1.1 200 OK') {
+		//Return favicon 
+    	return $host;
 	
 	}
 	else {
-	//place default image
-    return  "globe.jpg";
+		//place default image
+    	return  "globe.jpg";
 }	
 	
 	
