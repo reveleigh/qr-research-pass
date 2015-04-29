@@ -48,7 +48,7 @@ echo $theme;
         
         <p class = "labelForm"><b>Site two:</b> <?php echo $siteTwo ?></p>
         <p class = "labelForm">Title:</p>
-		<textarea rows="1" name="titleTextTwo" class="commentText"><?php echo getTitle($siteTwo); ?></textarea><br />
+		<textarea rows="1" name="titleTwo" class="commentText"><?php echo getTitle($siteTwo); ?></textarea><br />
 		<p class = "labelForm">Hosting site:</p>
 		<textarea rows="1" name="hostTextTwo" class="commentText"><?php echo $h2; ?></textarea><br />
 		<p class = "labelForm">Who made this site?</p>
@@ -62,7 +62,7 @@ echo $theme;
         
         <p class = "labelForm"><b>Site three:</b> <?php echo $siteThree ?></p>
         <p class = "labelForm">Title:</p>
-		<textarea rows="1" name="titleTextThree" class="commentText"><?php echo getTitle($siteThree); ?></textarea><br />
+		<textarea rows="1" name="titleThree" class="commentText"><?php echo getTitle($siteThree); ?></textarea><br />
 		<p class = "labelForm">Hosting site:</p>
 		<textarea rows="1" name="hostTextThree" class="commentText"><?php echo $h3; ?></textarea><br />
 		<p class = "labelForm">Who made this site?</p>
